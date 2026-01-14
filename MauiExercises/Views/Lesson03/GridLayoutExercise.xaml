@@ -5,8 +5,8 @@
 	<ContentPage.Content>
         
         <!-- Change here so the contact sheet is fixed in size and centered on the page-->
-        <StackLayout>
-            <Grid>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid WidthRequest="400" HeightRequest="350">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
@@ -24,30 +24,27 @@
                 </Grid.ColumnDefinitions>
  
                 <!-- Position below elements in the Grid using Grid.Row, Grid.Column, Grid.RowSpan, GridColumnSpan -->
-                <StackLayout BackgroundColor="Green">
+                <StackLayout BackgroundColor="Green" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3">
                     <Image Source="monkey.jfif" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" 
                            Aspect="AspectFill"/>
                 </StackLayout>
-                <StackLayout BackgroundColor="LightBlue" >
-                    <Label Text="Contact Details" FontSize="30" HorizontalOptions="Center" />
+                <StackLayout BackgroundColor="LightBlue" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3">
+                    <Label Text="Contact Details" TextColor="Black" FontSize="30" HorizontalOptions="Center" />
                 </StackLayout>
-                <StackLayout BackgroundColor="Salmon" >
-                    <Label Text="Phone:" />
+                <StackLayout BackgroundColor="Salmon" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3">
+                    <Label Text="Phone:" TextColor="Black" />
                 </StackLayout>
-                <StackLayout BackgroundColor="IndianRed" >
-                    <Label Text="Email:"/>
+                <StackLayout BackgroundColor="IndianRed" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3">
+                    <Label Text="Email:" TextColor="Black"/>
                 </StackLayout>
-                <StackLayout BackgroundColor="Purple" >
-                    <Label Text="Details:"/>
-                </StackLayout>
-
-                <StackLayout BackgroundColor="Purple" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5">
+                <StackLayout BackgroundColor="Purple" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2">
+                    <Label Text="Details:" TextColor="Black"/>
                 </StackLayout>
                 <StackLayout BackgroundColor="Yellow" Grid.Row="6" Grid.ColumnSpan="2">
-                    <Label Text="Cancel" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Text="Cancel" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                 </StackLayout>
                 <StackLayout BackgroundColor="SaddleBrown" Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2">
-                    <Label Text="Save" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Text="Save" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                 </StackLayout>
             </Grid>
         </StackLayout>

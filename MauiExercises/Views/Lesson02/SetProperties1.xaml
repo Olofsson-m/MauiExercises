@@ -15,7 +15,11 @@
             HorizontalOptions="Center" />
             
             <BoxView x:Name="lblColorBox" HeightRequest="200"></BoxView>
-            <Button Text="Change Color"></Button>
+            <Button Text="Change Color" Clicked="Button_Clicked">
+                <Button.FontAttributes>
+                    Bold
+                </Button.FontAttributes>
+            </Button>
 
         </VerticalStackLayout>
     </ScrollView>

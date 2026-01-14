@@ -12,4 +12,14 @@ public partial class SetProperties1 : ContentPage
 	{
 		InitializeComponent();
     }
+
+	private void Button_Clicked(object sender, EventArgs a)
+	{
+		_idx++;
+		if (_idx >= _colors.Count)
+			_idx = 0;
+		var color = _colors[_idx].Color;
+		lblColorBox.BackgroundColor = color;
+		
+	}
 }
