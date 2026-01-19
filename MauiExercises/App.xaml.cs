@@ -4,6 +4,7 @@ namespace MauiExercises
 {
     public partial class App : Application
     {
+        
         public App()
         {
             InitializeComponent();
@@ -20,10 +21,14 @@ namespace MauiExercises
             //using Global variables
             Global.Data.Message = "Application Started";
             Global.Data.Time = DateTime.Now;
+            
 
             //Exercise in Global add
             //a.	list of friends who’s favorite color contains the word “Blue”
+            Global.Data.Friends.Value.Where(f => f.FavoriteColor.FriendlyName.Contains("Blue"));
+            
             //b.	list of cities in Africa
+            
             //c.	list of named colors with a friendly name that contain the word “Red”  
         }
     }

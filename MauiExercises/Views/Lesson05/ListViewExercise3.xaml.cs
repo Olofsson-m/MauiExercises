@@ -29,10 +29,14 @@ namespace MauiExercises.Views.Lesson05
         }
         private async void Button_Clicked(object sender, EventArgs e)
         {
+            Routing.RegisterRoute("lesson05/listviewexercise4", typeof(ListViewExercise4));
+            await Shell.Current.GoToAsync("lesson05/listviewexercise4");
         }
 
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
+            Routing.RegisterRoute("lesson05/listviewexercise2", typeof(ListViewExercise2));
+            await Shell.Current.GoToAsync("lesson05/listviewexercise2");
         }
     }
 }

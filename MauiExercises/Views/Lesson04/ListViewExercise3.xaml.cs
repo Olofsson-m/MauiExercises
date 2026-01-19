@@ -11,6 +11,7 @@ namespace MauiExercises.Views.Lesson04
         public ListViewExercise3()
         {
             InitializeComponent();
+            ButtonList.ItemsSource = City.List;
         }
     }
 }

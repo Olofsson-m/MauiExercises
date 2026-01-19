@@ -23,9 +23,19 @@ namespace MauiExercises.Views.Lesson05
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
+            Routing.RegisterRoute("lesson05/listviewexercise2", typeof(ListViewExercise2));
+            await Shell.Current.GoToAsync("lesson05/listviewexercise2");
         }
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
+            await Shell.Current.GoToAsync("//lesson5");
+        }
+        protected override void OnNavigatedTo(NavigatedToEventArgs args)
+        {
+            base.OnNavigatedTo(args);
+
+            //Routing of this page
+            Title += $"   ({Shell.Current.CurrentState.Location.ToString()})";
         }
     }
 }

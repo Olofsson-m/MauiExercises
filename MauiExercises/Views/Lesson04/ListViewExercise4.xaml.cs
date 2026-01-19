@@ -13,7 +13,8 @@ namespace MauiExercises.Views.Lesson04
         public ListViewExercise4()
         {
             InitializeComponent();
-            CustomGroupedList.ItemsSource = City.List;
+            var grouped = City.List.OrderBy(c => c.Continent).GroupBy(c=> c.Continent);
+            CustomGroupedList.ItemsSource = grouped;
         }
 
         private async void ListViewItemTapped(object sender, ItemTappedEventArgs e)

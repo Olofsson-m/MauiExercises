@@ -5,10 +5,11 @@
                 Padding="20"
                 Title="ListViewExercise4">
     <StackLayout>
-        <ListView x:Name="CustomGroupedList" HasUnevenRows="true" ItemTapped="ListViewItemTapped">
+        <ListView x:Name="CustomGroupedList" HasUnevenRows="true" ItemTapped="ListViewItemTapped" IsGroupingEnabled="True">
             <ListView.GroupHeaderTemplate>
                 <DataTemplate>
                     <ViewCell Height="40">
+                        <Label FontSize="20" Text="{Binding Key}" />
                     </ViewCell>
                 </DataTemplate>
             </ListView.GroupHeaderTemplate>
